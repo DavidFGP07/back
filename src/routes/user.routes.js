@@ -1,14 +1,10 @@
-// src/routes/user.routes.js
 const { Router } = require('express');
 const { userController } = require('../controllers/user.controller');
 const { authMiddleware } = require('../middleware/auth.middleware');
-
 const router = Router();
 
-// Registro público
 router.post('/', (req, res) => userController.register(req, res));
 
-// Protegidas
 router.get('/:id', authMiddleware, (req, res) =>
   userController.getUser(req, res)
 );
