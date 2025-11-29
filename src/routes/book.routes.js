@@ -1,8 +1,6 @@
-// src/routes/book.routes.js
 const { Router } = require('express');
 const { bookController } = require('../controllers/book.controller');
 const { authMiddleware } = require('../middleware/auth.middleware');
-
 const router = Router();
 
 // Públicos
