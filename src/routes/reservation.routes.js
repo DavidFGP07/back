@@ -1,4 +1,3 @@
-// src/routes/reservation.routes.js
 const { Router } = require('express');
 const { reservationController } = require('../controllers/reservation.controller');
 const { authMiddleware } = require('../middleware/auth.middleware');
